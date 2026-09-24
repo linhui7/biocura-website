@@ -471,6 +471,13 @@ a {
     font-size: 0.85rem;
 }
 
+.company-address {
+    margin-top: 12px;
+    color: #b8c6d3;
+    font-style: normal;
+    line-height: 1.7;
+}
+
 
 /* =========================
    Mobile
@@ -532,6 +539,78 @@ a {
 
     .footer-grid {
         grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================
+   Key Partners
+========================= */
+
+.partners-section {
+    background: var(--white);
+}
+
+.partners-intro {
+    margin-top: 20px;
+    color: var(--gray);
+    font-size: 1.05rem;
+    max-width: 650px;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.partner-card {
+    min-height: 210px;
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    background: var(--light-gray);
+    border-top: 3px solid var(--blue);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(18, 54, 90, 0.08);
+}
+
+.partner-type {
+    margin-bottom: 15px;
+
+    color: var(--blue);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+.partner-card h3 {
+    color: var(--navy);
+    font-size: 1.3rem;
+    line-height: 1.35;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .partners-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-card {
+        min-height: 160px;
     }
 
 }
