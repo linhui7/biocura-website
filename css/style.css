@@ -365,7 +365,7 @@ a {
 ========================= */
 
 .marketing {
-    background: white;
+    background: var(--light-gray);
 }
 
 .capability-grid {
