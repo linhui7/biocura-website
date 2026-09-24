@@ -548,7 +548,7 @@ a {
 ========================= */
 
 .partners-section {
-    background: var(--white);
+    background: var(--light-blue);
 }
 
 .partners-intro {
@@ -560,7 +560,7 @@ a {
 
 .partners-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
 }
 
@@ -572,7 +572,8 @@ a {
     flex-direction: column;
     justify-content: flex-end;
 
-    background: var(--light-gray);
+    background: var(--white);
+    border: 1px solid var(--border);
     border-top: 3px solid var(--blue);
 
     transition:
@@ -606,11 +607,18 @@ a {
 @media (max-width: 800px) {
 
     .partners-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .partner-card {
         min-height: 160px;
+        padding: 24px;
     }
 
+}
+
+@media (max-width: 480px) {
+    .partners-grid {
+        grid-template-columns: 1fr;
+    }
 }
